@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    color: #343a40;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    color: #343a40;
+    min-height: 100vh;
+    position: fixed;
+}
+
+.company-name h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+}
+
+.profile {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #eaecef;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.menu-label {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #868e96;
+    padding: 10px 20px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    padding: 10px 20px;
+}
+
+.menu li.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.menu a {
+    color: #343a40;
+    text-decoration: none;
+    display: block;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover,
+.menu li.active a {
+    color: white;
+}
+
+.main-content {
+    margin-left: 250px; /* same as sidebar width */
+    flex-grow: 1;
+    background-color: #edf2f7;
+    width: calc(100% - 250px);
+}
+
+.top-bar {
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+
+
+.search-container input[type="search"] {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+    outline: none;
+}
+
+.content {
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    .page-title {
+        left: 20px;
+    }
+}
+
+
+
+
+
+
+
+.faq-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 800px; /* Adjust as needed */
+  margin: auto;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="search"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.category-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.category {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+h4 {
+  display: inline;
+}
+
+.view-all {
+  float: right;
+  text-decoration: none;
+  color: blue;
+}
+
+.question {
+  font-weight: bold;
+  color: #333;
+}
+.faq-section {
+  margin-top: 10px;
+}
+
+.faq-item {
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  display: none; /* Hide answers by default */
+}
+
+.toggle-sign {
+  font-size: 24px; /* Adjust size as needed */
+}
+
+
+
+                                                                              /*CHAT SUPPORT ICON*/
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  /* Add icon styling here */
+}
+
+.chat-icon-container {
+  position: fixed;
+  bottom: 20px;
+  color: white;
+  right: 20px;
+  background-color: #6F42C1; /* Purple background */
+  padding: 10px;
+  border-radius: 5px; /* Circular container */
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  z-index: 1000; /* Make sure it's clickable above other content */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Style your chat icon image if needed */
+#chatIcon {
+  display: block;
+  width: 30px; /* Adjust as needed */
+  height: 30px; /* Adjust as needed */
+}
+
+.chat-support-container {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures input is at the bottom */
+  height: 100vh;
+  position: fixed;
+  padding-bottom: 30px;
+  right: 0;
+  top: 0;
+  width: 350px; /* Adjust as needed */
+  /* Your existing styles */
+}
+
+#chatMessages {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+}
+
+.chat-input .upload-icon {
+  cursor: pointer;
+}
+
+                                                                                /*CHAT SUPPORT */
+/* Apply the same font styles to the chat input as the FAQ questions */
+.chat-input input[type="text"],
+.chat-input button {
+  font-family: inherit; /* Inherits the font from the body or parent element */
+  font-size: 1rem; /* Adjust the size as needed to match the FAQ text */
+}
+
+/* Right-align the user's message bubbles */
+.user-message {
+  margin-left: auto; /* Pushes the message bubble to the right */
+  background-color: #D1EFFF; /* The color you choose for the user's message bubbles */
+}
+
+
+
+
+.chat-header {
+  display: flex;
+  justify-content: space-between; /* This will spread out the items to each end */
+  align-items: center;
+  text-align: center;
+  padding: 10px 10px; /* Add padding on the sides if needed */
+}
+
+#backArrow {
+  cursor: pointer;
+  /* Additional styles if needed */
+}
+
+.chat-support-title {
+  flex-grow: 1; /* This will allow the title to take up the available space */
+  font-size: 16px; /* Adjust size to match FAQ style */
+  font-weight: bold; /* Adjust weight to match FAQ style */
+}
+
+.header-placeholder {
+  /* This will serve as a visual balance to the backArrow */
+  width: 24px; /* Should be the same width as the backArrow for balance */
+  height: 24px; /* Should be the same height as the backArrow for balance */
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  position: relative;
+  border-bottom-left-radius: 18px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.user-message {
+  background-color: #D1EFFF; /* Light blue background */
+  align-self: flex-end;
+}
+
+.support-message {
+  align-self: flex-start;
+  background-color: #f4f4f4; /* Light grey background */
+}
+
+.message-text {
+  word-wrap: break-word;
+}
+
+.message-time {
+  align-self: flex-end;
+  color: #666;
+  font-size: 0.75rem; /* Adjust to match your desired timestamp font size */
+  margin-top: 4px;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input input[type="text"] {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+  font-size: 1rem; /* Adjust to match the rest of your chat */
+}
+
+.chat-input button {
+  background: none;
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 1rem; /* Adjust to match your input field font size */
+}
+
+/* Style for the send icon next to the input field */
+.send-icon {
+  cursor: pointer;
+  /* Add additional styling as needed */
+}
+
+/* Style the send and upload buttons/icons */
+.chat-input .send-icon,
+.chat-input .upload-icon {
+  cursor: pointer;
+}
+
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background: #fff;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+
+.help-support-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* This will make both children of the same height */
+}
+
+.faq-container, .chat-support-container {
+  flex: 1; /* Both containers take up equal width */
+  margin: 10px; /* Optional: adds space between the containers */
+  /* Your existing styles for faq-container and chat-support-container */
+}

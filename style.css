@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    color: #343a40;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    color: #343a40;
+    min-height: 100vh;
+    position: fixed;
+}
+
+.company-name h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+}
+
+.profile {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #eaecef;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.menu-label {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #868e96;
+    padding: 10px 20px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    padding: 10px 20px;
+}
+
+.menu li.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.menu a {
+    color: #343a40;
+    text-decoration: none;
+    display: block;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover,
+.menu li.active a {
+    color: white;
+}
+
+.main-content {
+    margin-left: 250px; /* same as sidebar width */
+    flex-grow: 1;
+    background-color: #edf2f7;
+    width: calc(100% - 250px);
+}
+
+.top-bar {
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+
+
+.search-container input[type="search"] {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+    outline: none;
+}
+
+.content {
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    .page-title {
+        left: 20px;
+    }
+}

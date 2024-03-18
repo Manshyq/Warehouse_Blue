@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <!-- Company Name -->
+        <div class="company-name">
+            <h1>Warehouse Master</h1>
+        </div>
+        <!-- Profile -->
+        <div class="profile" href="profile.html">
+            <img src="pictures/rustam.png" alt="Patrick Becker" class="profile-picture">
+            <h3>Patrick Becker</h3>
+            <p>UI/UX Designer</p>
+        </div>
+        <!-- Menu Label -->
+        <p class="menu-label">MENU</p>
+        <!-- Navigation -->
+        <nav class="menu">
+            <ul>
+                <li class=""><a href="index.html">Dashboard</a></li>
+                <li class="active"><a href="products.html">Products</a></li>
+                <li class=""><a href="customers.html">Customers</a></li>
+                <li class=""><a href="finance.html">Finance</a></li>
+                <li class=""><a href="help.html">Help</a></li>
+                <!-- more menu items -->
+            </ul>
+        </nav>
+    </aside>
+    <div class="main-content">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="search-container">
+                <div class="search-wrapper" style="position: relative;">
+          <input type="search" placeholder="Search" id="searchInput">
+          <div id="searchResults" class="search-results" ></div>
+        </div>
+            </div>
+            <!-- more top bar items can be added here -->
+        </header>
+        <!-- Main container -->
+        <div class="content">
+            
+<table>
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th class="name-column"></th>
+      <th class="stock-column">Stock</th>
+      <th class="price-column">Price</th>
+      <th class="sales-column">Total Sales</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr onclick="showProductDetails('soya-milk-details')">
+      <td class="product-image"><img src="pictures/soya-milk.jpeg" alt="Soya Milk"></td>
+      <td><b>Soya milk</b></td>
+      <td>55 in stock</td>
+      <td>$45.99</td>
+      <td>40</td>
+    </tr>
+    <tr onclick="showProductDetails('chocolate-muffin-details')">
+      <td class="product-image"><img src="pictures/chocolate-muffin.jpeg" alt="Chocolate Muffin"></td>
+      <td><b>Chocolate Muffin</b></td>
+      <td>60 in stock</td>
+      <td>$35.90</td>
+      <td>25</td>
+    </tr>
+    <tr onclick="showProductDetails('paper-cups-details')">
+      <td class="product-image"><img src="pictures/paper-cups.jpeg" alt="Paper Cups"></td>
+      <td><b>Paper Cups</b></td>
+      <td>200 in stock</td>
+      <td>$20.30</td>
+      <td>123</td>
+    </tr>
+    <tr onclick="showProductDetails('lemonade-details')">
+      <td class="product-image"><img src="pictures/lemonade.jpeg" alt="Lemonade Base"></td>
+      <td><b>Lemonade Base</b></td>
+      <td>10 in stock</td>
+      <td>$5.25</td>
+      <td>Not for sale</td>
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+
+
+
+                                                                        <!-- PRODUCT DETAILS-->
+
+<div class="product-details" id="soya-milk-details" style="display: none;"> 
+  <img src="pictures/soya-milk.jpeg" alt="Chocolate Muffin">
+   <div class="qr-code">
+      <img src="pictures/qr.png" alt="QR Code">
+    </div>
+  <h2>Soya milk</h2>
+  <div class="product-info">
+    <div>
+      <h3>Ordered</h3>
+      <p>Saturday, March 8 2022</p>
+      <h3>Delivered</h3>
+      <p>Monday, March 10 2022</p>
+    </div>
+    <div>
+      <h3>Price</h3>
+      <p>$35.90</p>
+      <h3>Opened</h3>
+      <p>Monday, March 15 2022 22:30:12</p>
+    </div>
+    <div>
+      <h3>Expired</h3>
+      <p>Saturday, March 15 2022 22:30:12</p>
+      <h3>Sold</h3>
+      <p>Tuesday, March 16 14:23:10 1pcs</p>
+      <p>Tuesday, March 16 18:17:10 4pcs</p>
+      <p>Wednesday, March 16 10:13:10 2 pcs</p>
+    </div>
+  </div>
+</div>
+
+<div class="product-details" id="chocolate-muffin-details" style="display: none;">
+  <img src="pictures/chocolate-muffin.jpeg" alt="Chocolate Muffin">
+   <div class="qr-code">
+      <img src="pictures/qr.png" alt="QR Code">
+    </div>
+  <h2>Chocolate Muffin</h2>
+  <div class="product-info">
+    <div>
+      <h3>Ordered</h3>
+      <p>Saturday, March 13 2022</p>
+      <h3>Delivered</h3>
+      <p>Monday, March 15 2022</p>
+    </div>
+    <div>
+      <h3>Price</h3>
+      <p>$35.90</p>
+      <h3>Opened</h3>
+      <p>Monday, March 15 2022 22:30:12</p>
+    </div>
+    <div>
+      <h3>Expired</h3>
+      <p>Saturday, March 15 2022 22:30:12</p>
+      <h3>Sold</h3>
+      <p>Tuesday, March 16 14:23:10 1pcs</p>
+      <p>Tuesday, March 16 18:17:10 4pcs</p>
+      <p>Wednesday, March 16 10:13:10 2 pcs</p>
+    </div>
+  </div>
+</div>
+
+<div class="product-details" id="paper-cups-details" style="display: none;">
+  <img src="pictures/paper-cups.jpeg" alt="Chocolate Muffin">
+   <div class="qr-code">
+      <img src="pictures/qr.png" alt="QR Code">
+    </div>
+  <h2>Paper cups</h2>
+  <div class="product-info">
+    <div>
+      <h3>Ordered</h3>
+      <p>Saturday, March 13 2022</p>
+      <h3>Delivered</h3>
+      <p>Monday, March 15 2022</p>
+    </div>
+    <div>
+      <h3>Price</h3>
+      <p>$35.90</p>
+      <h3>Opened</h3>
+      <p>Monday, March 15 2022 22:30:12</p>
+    </div>
+    <div>
+      <h3>Expired</h3>
+      <p>Saturday, March 15 2022 22:30:12</p>
+      <h3>Sold</h3>
+      <p>Tuesday, March 16 14:23:10 1pcs</p>
+      <p>Tuesday, March 16 18:17:10 4pcs</p>
+      <p>Wednesday, March 16 10:13:10 2 pcs</p>
+    </div>
+  </div>
+</div>
+
+<div class="product-details" id="lemonade-details" style="display: none;">
+  <img src="pictures/lemonade.jpeg" alt="Chocolate Muffin">
+   <div class="qr-code">
+      <img src="pictures/qr.png" alt="QR Code">
+    </div>
+  <h2>Lemonade base</h2>
+  <div class="product-info">
+    <div>
+      <h3>Ordered</h3>
+      <p>Saturday, March 13 2022</p>
+      <h3>Delivered</h3>
+      <p>Monday, March 15 2022</p>
+    </div>
+    <div>
+      <h3>Price</h3>
+      <p>$35.90</p>
+      <h3>Opened</h3>
+      <p>Monday, March 15 2022 22:30:12</p>
+    </div>
+    <div>
+      <h3>Expired</h3>
+      <p>Saturday, March 15 2022 22:30:12</p>
+      <h3>Sold</h3>
+      <p>Tuesday, March 16 14:23:10 1pcs</p>
+      <p>Tuesday, March 16 18:17:10 4pcs</p>
+      <p>Wednesday, March 16 10:13:10 2 pcs</p>
+    </div>
+  </div>
+</div>
+  </main>
+</div>
+        </div>
+    </div>
+
+
+<div class="footer">
+  <!-- Footer content -->
+</div>
+
+<script src="products.js"></script>
+</body>
+</html>
