@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="customers.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <!-- Company Name -->
+        <div class="company-name">
+            <h1>Warehouse Master</h1>
+        </div>
+        <!-- Profile -->
+        <div class="profile">
+            <img src="pictures/rustam.png" alt="Patrick Becker" class="profile-picture">
+            <h3>Patrick Becker</h3>
+            <a href="profile.html">
+              Edit profile
+            </a>
+        </div>
+        <!-- Menu Label -->
+        <p class="menu-label">MENU</p>
+        <!-- Navigation -->
+        <nav class="menu">
+            <ul>
+                <li class=""><a href="index.html">Dashboard</a></li>
+                <li class=""><a href="products.html">Products</a></li>
+                <li class="active"><a href="customers.html">Customers</a></li>
+                <li class=""><a href="finance.html">Finance</a></li>
+                <li class=""><a href="help.html">Help</a></li>
+                <!-- more menu items -->
+            </ul>
+        </nav>
+    </aside>
+    <div class="main-content">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="search-container">
+                <div class="search-wrapper" style="position: relative;">
+                  <input type="search" placeholder="Search" id="searchInput">
+                  <div id="searchResults" class="search-results" ></div>
+                </div>
+            </div>
+            <!-- more top bar items can be added here -->
+        </header>
+        <!-- Main container -->
+        <div class="content">
+            
+         <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+            <th> </th>
+          <th class="phone-column">Phone number</th>
+          <th class="order-column">Order history</th>
+          <th class="sales-column">Total Sales</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr onclick="showProductDetails('customer1-details')">
+          <td class="product-image"><img src="pictures/jack-jones.jpeg" alt="Jack Jones"></td>
+          <td><b>Jack Jones</b></td>
+          <td>8 747 554 6787</td>
+          <td>Monday, March 6</td>
+          <td>40</td>
+        </tr>
+        <tr onclick="showProductDetails('customer2-details')">
+          <td class="product-image"><img src="pictures/aliya.jpeg" alt="Aliya Nazarova"></td>
+          <td><b>Aliya Nazarova</b></td>
+          <td>8 747 333 6787</td>
+          <td>Wednesday, March 8</td>
+          <td>10</td>
+        </tr>
+        <tr onclick="showProductDetails('customer3-details')">
+          <td class="product-image"><img src="pictures/girl.jpeg" alt="Kim Lee "></td>
+          <td><b>Kim Lee</b></td>
+          <td>8 777 123 6787</td>
+          <td>Monday, March 6</td>
+          <td>40</td>
+        </tr>
+        <tr onclick="showProductDetails('customer4-details')"> 
+          <td class="product-image"><img src="pictures/Kim.png" alt="Aibek Kim"></td>
+          <td><b>Aibek Kim</b></td>
+          <td>8 747 554 6787</td>
+          <td>Monday, March 6</td>
+          <td>40</td>
+        </tr>
+        <tr onclick="showProductDetails('customer5-details')">
+          <td class="product-image"><img src="pictures/Aigerim.png" alt="Aigerim Ali"></td>
+          <td><b>Aigerim Ali</b></td>
+          <td>8 747 333 6787</td>
+          <td>Wednesday, March 8</td>
+          <td>10</td>
+        </tr>
+        <tr onclick="showProductDetails('customer6-details')">
+          <td class="product-image"><img src="pictures/Rustam.png" alt="Rustam Bolatovich"></td>
+          <td><b>Rustam Bolatovich</b></td>
+          <td>8 777 123 6787</td>
+          <td>Monday, March 6</td>
+          <td>40</td>
+        </tr>
+        <tr onclick="showProductDetails('customer7-details')">
+          <td class="product-image"><img src="pictures/Jennifer.png" alt="Jennifer Aniston"></td>
+          <td><b>Jennifer Aniston</b></td>
+          <td>8 747 554 6787</td>
+          <td>Monday, March 6</td>
+          <td>40</td>
+        </tr>
+      
+        <!-- Add more customers as needed -->
+      </tbody>
+    </table>
+
+
+
+
+                                                                                  <!-- CUSTOMER DETAILS-->
+    <div class="customer-details" id="customer1-details" >
+      <img src="pictures/jack-jones.jpeg" alt="Jack Jones">
+      <h2>Jack Jones</h2>
+      <div class="customer-info">
+        <div>
+          <h3>Order history</h3>
+          <p>Monday, March 6 2022 22:30:12</p>
+        </div>
+        <div>
+          <h3>Phone number</h3>
+          <p>8 747 554 6787</p>
+          <h3>Email</h3>
+          <p>john.brown@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="customer-details" id="customer2-details" style="display: none;">
+      <img src="pictures/aliya.jpeg" alt="Aliya Nazarova">
+      <h2>Aliya Nazarova</h2>
+      <div class="customer-info">
+        <div>
+          <h3>Order history</h3>
+          <p>Monday, March 6 2022 22:30:12</p>
+        </div>
+        <div>
+          <h3>Phone number</h3>
+          <p>8 747 123 6787</p>
+          <h3>Email</h3>
+          <p>aliya.n@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+
+        <div class="customer-details" id="customer3-details" style="display: none;">
+      <img src="pictures/girl.jpeg" alt="Kim Lee">
+      <h2>Kim Lee</h2>
+      <div class="customer-info">
+        <div>
+          <h3>Order history</h3>
+          <p>Monday, March 6 2022 22:30:12</p>
+        </div>
+        <div>
+          <h3>Phone number</h3>
+          <p>8 747 567 675</p>
+          <h3>Email</h3>
+          <p>kim.lee@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+        <div class="customer-details" id="customer4-details" style="display: none;">
+      <img src="pictures/kim.png" alt="Aibek Kim">
+      <h2>Aibek Kim </h2>
+      <div class="customer-info">
+        <div>
+          <h3>Order history</h3>
+          <p>Monday, March 6 2022 22:30:12</p>
+        </div>
+        <div>
+          <h3>Phone number</h3>
+          <p>8 747 554 3456</p>
+          <h3>Email</h3>
+          <p>aibek.kim@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+        <div class="customer-details" id="customer5-details" style="display: none;">
+      <img src="pictures/aigerim.png" alt="Aigerim Ali">
+      <h2>Aigerim Ali</h2>
+      <div class="customer-info">
+        <div>
+          <h3>Order history</h3>
+          <p>Monday, March 6 2022 22:30:12</p>
+        </div>
+        <div>
+          <h3>Phone number</h3>
+          <p>8 747 554 6787</p>
+          <h3>Email</h3>
+          <p>aigerim.ali@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+        <div class="customer-details" id="customer6-details" style="display: none;">
+      <img src="pictures/rustam.png" alt="Rustam Bolatovich">
+      <h2>Rustam Bolatovich</h2>
+      <div class="customer-info">
+        <div>
+          <h3>Order history</h3>
+          <p>Monday, March 6 2022 22:30:12</p>
+        </div>
+        <div>
+          <h3>Phone number</h3>
+          <p>8 747 554 6787</p>
+          <h3>Email</h3>
+          <p>rustam@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+        <div class="customer-details" id="customer7-details" style="display: none;">
+      <img src="pictures/aliya.jpeg" alt="Jennifer Anniston">
+      <h2>Jennifer Anniston</h2>
+      <div class="customer-info">
+        <div>
+          <h3>Order history</h3>
+          <p>Monday, March 6 2022 22:30:12</p>
+        </div>
+        <div>
+          <h3>Phone number</h3>
+          <p>8 747 554 6787</p>
+          <h3>Email</h3>
+          <p>jen@gmail.com</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+  </main>
+</div>
+<div class="footer">
+  <!-- Footer content -->
+  <script src="customers.js"></script>
+</div>
+</body>
+</html>
